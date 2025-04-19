@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Lip Balm Haven</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(45deg,#fac6ff, #f777ece5, #fd0f726a, #ec0047ec);
+            background-size: 300% 300%;
+            animation: backgroundAnimation 10s ease infinite;
+        }
+
+
+        @keyframes backgroundAnimation {
+           0% {background-position: 0% 50%;}
+           50% {background-position: 100% 50%;}
+           100% {background-position: 0% 50%;}
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #d81b60;
+        }
+        p {
+            font-size: 5px;
+            line-height: 1.6;
+        }
+        .image-container {
+            margin: 0 auto;
+            width: 500px;
+           
+        }
+        .image-container img {
+            max-width: 250px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+
+        .container h1 {
+        font-family: "Arizonia", cursive;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 45px;
+        }
+
+
+        .container p {
+            font-family: cursive;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 13px;
+            padding-top: 5px;
+            padding-bottom: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+    .carousel {
+      position:relative;
+      width: 500px;
+      max-width: 400px;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-image {
+      min-width: 100%;
+      min-height: 100%;
+      transition: transform 0.3s ease;  
+    }
+
+
+    .carousel-image:hover {
+      transform: scale(1.05);
+    }
+
+    .carousel image img {
+      width: 500px;
+      height: 500px;
+      display: block;
+      object-fit: cover;
+    }
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 20px;
+      border-radius: 50%;
+      z-index: 10;
+      transition: background-color 0.3s;
+    }
+
+    .arrow:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .arrow-left {
+      left: 10px;
+    }
+
+    .arrow-right {
+      right: 10px;
+    }
+
+    hr{
+      border-top: 12px dotted #d81b60;
+      border-radius: 12px;
+      width: 10%;
+    }
+    </style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h1>About Lipzy</h1>
+        <hr>
+        <br><br>
+        <div class="image-container">
+            <!--img src="lip-balm-main.jpg" alt="Lip Balm Collection"-->
+            <div class="carousel">
+                <button class="arrow arrow-left">&#8592;</button>
+                <div class="carousel-track">
+                  <div class="carousel-image">
+                    <img src="marketing.jpg" alt="Image 1">
+                  </div>
+                  <div class="carousel-image">
+                    <img src="pdt.png" alt="Image 3">
+                  </div>
+                </div>
+                <button class="arrow arrow-right">&#8594;</button>
+              </div>
+        </div>
+
+        <p>Welcome to Lipzy, your one-stop shop for luxurious, all-natural lip balms. Our mission is to keep your lips soft, hydrated, and healthy with our carefully crafted formulas.</p>
+        <hr>
+        <br><br>
+        <div class="image-container">
+            <div class="carousel">
+                <button class="arrow arrow-left">&#8592;</button>
+                <div class="carousel-track">
+                  <div class="carousel-image">
+                    <img src="powder.jpg" alt="Image 1">
+                  </div>
+                  <div class="carousel-image">
+                    <img src="butter.jpg" alt="Image 2">
+                  </div>
+                  <div class="carousel-image">
+                    <img src="oil.png" alt="Image 3">
+                  </div>
+                </div>
+                <button class="arrow arrow-right">&#8594;</button>
+            </div>
+        </div>
+
+        <p>We believe in using only the finest organic ingredients to create lip balms that not only nourish but also delight your senses. Whether you're looking for a classic formula or an exotic new flavor, we have something special just for you.</p>
+        <hr>
+        <br><br>
+        <div class="image-container">
+            <div class="carousel">
+                <button class="arrow arrow-left">&#8592;</button>
+                <div class="carousel-track">
+                  <div class="carousel-image">
+                    <img src="cus-1.jpg" alt="Image 1" width="1000px" height=auto>
+                  </div>
+                  <div class="carousel-image">
+                    <img src="cus-2.jpg" alt="Image 2" width="1000px" height=auto>
+                  </div>
+                  <div class="carousel-image">
+                    <img src="cus-3.jpg" alt="Image 3" width="1000px" height="1000px">
+                  </div>
+                </div>
+                <button class="arrow arrow-right">&#8594;</button>
+            </div>
+        </div>
+        <p>Join our community of happy customers who have discovered the secret to nourished, radiant lips! From soothing hydration to irresistible flavors, our lip balms are loved for their natural goodness and effective care. Let their stories inspire you—because healthier, happier lips are just a swipe away. Ready to be part of the journey? 
+        </p>
+    </div>
+</body>
+
+<script>
+    document.querySelectorAll('.carousel').forEach(carousel => {
+      const track = carousel.querySelector('.carousel-track');
+      const slides = Array.from(track.children);
+      const nextButton = carousel.querySelector('.arrow-right');
+      const prevButton = carousel.querySelector('.arrow-left');
+      let currentSlide = 0;
+  
+      function updateCarousel() {
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+      }
+  
+      nextButton.addEventListener('click', () => {
+        if (currentSlide < slides.length - 1) {
+          currentSlide++;
+          updateCarousel();
+        }
+      });
+  
+      prevButton.addEventListener('click', () => {
+        if (currentSlide > 0) {
+          currentSlide--;
+          updateCarousel();
+        }
+      });
+  
+      window.addEventListener('resize', updateCarousel);
+      window.addEventListener('load', updateCarousel);
+    });
+  </script>
+  
+
+</html>
+
+<!--div class="carousel">
+    <button class="arrow arrow-left">&#8592;</button>
+    <div class="carousel-track">
+      <div class="carousel-image">
+        <img src="https://via.placeholder.com/1000x400?text=Image+1" alt="Image 1">
+      </div>
+      <div class="carousel-image">
+        <img src="https://via.placeholder.com/1000x400?text=Image+2" alt="Image 2">
+      </div>
+      <div class="carousel-image">
+        <img src="https://via.placeholder.com/1000x400?text=Image+3" alt="Image 3">
+      </div>
+    </div>
+    <button class="arrow arrow-right">&#8594;</button>
+  </div>
