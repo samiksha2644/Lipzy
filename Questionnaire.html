@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lip Care Questionnaire</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(90deg, #0bd2d9, #0093bb, #004ac0, #7000c0, #d60185);
+      background-size: 300% 300%;
+      animation: gradientAnimation 10s ease infinite;
+    }
+
+    @keyframes gradientAnimation {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
+      max-width: 400px;
+      background: white;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
+      z-index: 1000;
+      text-align: center;
+    }
+
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+
+    .popup h2 {
+      margin-bottom: 10px;
+    }
+
+    .popup form {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+    
+    .popup label {
+      display: block;
+      margin: 10px 0;
+    }
+    
+    .popup button {
+      margin-top: 15px;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: white;
+    }
+    
+    .popup .close {
+      background: #555;
+    }
+    
+    .question-number {
+      position: absolute;
+      top: 10px;
+      left: 15px;
+      font-size: 14px;
+      color: #333;
+    }
+    
+    .title {
+      position: absolute;
+      top: 10px;
+      left: 50px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #2a5298;
+    }
+  </style>
+
+<body>
+
+    <div class="popup-overlay" id="popupOverlay"></div>
+
+      <div class="popup" id="popup">
+        <span class="title">LIP CARE QUESTIONNAIRE</span>
+        <span class="question-number" id="questionNumber">1/15</span>
+
+        <form id="questionnaire">
+          <div class="question" id="question1">
+            <label>How would you describe your lip skin type?</label>
+            <input type="checkbox"> Normal<br>
+            <input type="checkbox"> Dry and chapped<br>
+            <input type="checkbox"> Sensitive<br>
+            <input type="checkbox"> Oily
+          </div>
+
+          <!-- Question 2 -->
+           <div class="question">
+            <label>Do you experience frequent lip dryness or cracking?</label>
+            <input type="checkbox"> Yes<br>
+            <input type="checkbox"> Occasionally<br>
+            <input type="checkbox"> No<br>
+           </div>
+          
+          <!-- Question 3 -->
+          <div class="question"><label>Do you have any known allergies to natural ingredients? (Select all that apply)</label>
+            <input type="checkbox"> Beetroot<br>
+            <input type="checkbox"> Rose<br>
+            <input type="checkbox"> Strawberry<br>
+            <input type="checkbox"> Coconut<br>
+            <input type="checkbox"> Shea Butter<br>
+            <input type="checkbox"> Honey<br>
+            <input type="checkbox"> Others<br>
+          </div>
+          
+
+          <!-- Question 4 -->
+           <div class="question"><label>Do you prefer lip balms with SPF protection?</label>
+            <input type="checkbox"> Yes, I want SPF in my lip balm<br>
+            <input type="checkbox"> No, it’s not necessary<br>
+            <input type="checkbox"> I’m not sure<br>
+          </div>
+          
+
+          <!-- Question 5 -->
+           <div class="question">
+            <label>Are you looking for a lip balm with added benefits? (Select all that apply)</label>
+            <input type="checkbox"> Hydration and moisture<br>
+            <input type="checkbox"> Sun protection (SPF)<br>
+            <input type="checkbox"> Anti-aging properties<br>
+            <input type="checkbox"> Plumping effect<br>
+            <input type="checkbox"> Healing for cracked lips<br>
+           </div>
+         
+
+          <!-- Question 6 -->
+           <div class="question">
+            <label>Do you have any specific concerns about your lips?</label>
+            <input type="checkbox"> Hyperpigmentation<br>
+            <input type="checkbox"> Sensitivity to certain ingredients<br>
+            <input type="checkbox"> Prone to cold sores<br>
+           </div>
+          
+
+          <!-- Question 7 -->
+           <div class="question"><label>Do you prefer a tinted or clear lip balm?</label>
+            <input type="checkbox"> Tinted (adds a slight color)<br>
+            <input type="checkbox"> Clear (no color)<br>
+          </div>
+          
+          <!-- Question 8 -->
+           <div class="question">
+            <label>What kind of texture do you like in a lip balm?</label>
+            <input type="checkbox"> Lightweight and non-greasy<br>
+            <input type="checkbox"> Thick and deeply moisturizing<br>
+            <input type="checkbox"> Glossy and shiny<br>
+            <input type="checkbox"> Matte finish<br>
+          </div>
+          
+          <!-- Question 9 -->
+           <div class="question">
+            <label>Which lip balm flavors appeal to you the most? (Select all that apply)</label>
+            <input type="checkbox"> Beetroot<br>
+            <input type="checkbox"> Rose<br>
+            <input type="checkbox"> Strawberry<br>
+            <input type="checkbox"> Mint<br>
+            <input type="checkbox"> Vanilla<br>
+            <input type="checkbox"> Unscented<br>
+            <input type="checkbox"> None<br>
+           </div>
+          
+          <!-- Question 10 -->
+           <div class="question">
+            <label>Would you be interested in a custom lip balm blend based on your preferences?</label>
+            <input type="checkbox"> Yes, I’d love a personalized lip balm<br>
+            <input type="checkbox"> No, I prefer ready-made options<br>
+           </div>
+          
+          <!-- Question 11 -->
+           <div class="question">
+            <label>Do you prefer natural and organic ingredients in your lip balm?</label>
+            <input type="checkbox"> Yes, I only use natural/organic products<br>
+            <input type="checkbox"> No, I don’t mind other ingredients<br>
+            <input type="checkbox"> I’m not sure<br>
+          </div>
+          
+          <!-- Question 12 -->
+          <div class="question">
+            <label>Would you like to receive recommendations based on your answers?</label>
+            <input type="checkbox"> Yes, please recommend the best lip balm for me<br>
+            <input type="checkbox"> No, I prefer to explore myself<br>
+          </div>
+          
+
+          <!-- Question 13 -->
+           <div class="question">
+            <label>How did you hear about our brand?</label>
+            <input type="checkbox"> Social media<br>
+            <input type="checkbox"> Friends/family<br>
+            <input type="checkbox"> Google search<br>
+            <input type="checkbox"> Other <input type="text"><br>
+           </div>
+
+           <!-- Question 14 -->
+            <div class="question">
+              <label>Would you like to join our mailing list for exclusive offers and lip care tips?</label>
+              <input type="checkbox"> Yes, sign me up!<br>
+              <input type="checkbox"> No, thanks<br>
+            </div>
+
+       
+          <!-- Navigation Buttons -->
+          <div class="buttons">
+            <button type="button" id="prevBtn" onclick="prevQuestion()" style="display: none;">Previous</button>
+            <button type="button" id="nextBtn" onclick="nextQuestion()">Next</button>
+            <button type="submit" id="submitBtn" style="display: none;">Submit</button>
+          </div>
+
+          <button type="button" class="close" onclick="closePopup()">Close</button>
+
+</form>
+</div>
+
+<script>
+  let currentQuestion = 1;
+const totalQuestions = 14;
+
+function showQuestion(questionNum) {
+  document.querySelectorAll('.question').forEach((q, index) => {
+    q.style.display = (index + 1 === questionNum) ? 'block' : 'none';
+  });
+
+  document.getElementById('questionNumber').innerText = `${questionNum}/${totalQuestions}`;
+
+  document.getElementById('prevBtn').style.display = (questionNum === 1) ? 'none' : 'inline-block';
+  document.getElementById('nextBtn').style.display = (questionNum === totalQuestions) ? 'none' : 'inline-block';
+  document.getElementById('submitBtn').style.display = (questionNum === totalQuestions) ? 'inline-block' : 'none';
+}
+
+function nextQuestion() {
+  if (currentQuestion < totalQuestions) {
+    currentQuestion++;
+    showQuestion(currentQuestion);
+  }
+}
+
+function prevQuestion() {
+  if (currentQuestion > 1) {
+    currentQuestion--;
+    showQuestion(currentQuestion);
+  }
+}
+
+function closePopup() {
+  document.getElementById("popupOverlay").style.display = "none";
+  document.getElementById("popup").style.display = "none";
+}
+
+window.onload = function () {
+  document.getElementById("popupOverlay").style.display = "block";
+  document.getElementById("popup").style.display = "block";
+  showQuestion(currentQuestion);
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  const isSubmitted = localStorage.getItem("questionnaireSubmitted");
+
+  if (isSubmitted === "true") {
+    document.getElementById("questionnaire").style.display = "none";
+    document.getElementById("thankYouMessage").style.display = "block";
+  }
+
+  document.getElementById("submitForm").addEventListener("click", (event) => {
+    event.preventDefault(); // Prevents page reload
+    localStorage.setItem("questionnaireSubmitted", "true");
+
+    document.getElementById("questionnaire").style.display = "none";
+    document.getElementById("thankYouMessage").style.display = "block";
+  });
+});
+
+</script>
+          
+
+
