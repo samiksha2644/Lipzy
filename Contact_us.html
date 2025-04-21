@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Lipzy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: cursive;
+      margin: 0;
+      padding: 0;
+      color: #f0ffc0;
+      background: 
+        linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), /* black overlay */
+        url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      display:flex;
+      
+    }
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 30px;
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #3c4d03;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    h2 {
+      color: #5b962b;
+      margin-top: 40px;
+    }
+    p {
+      margin: 10px 0;
+    }
+    .form-group {
+      margin-bottom: 20px;
+      width:80%;
+      align-items: center;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+    textarea {
+      height: 120px;
+    }
+    button {
+      background-color: #5b962b;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1em;
+      border-radius: 6px;
+      cursor: pointer;
+      
+    }
+    button:hover {
+      background-color: #5b962b
+    }
+    .social-links a {
+      margin-right: 15px;
+      color: #5b962b;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .social-links a:hover {
+      text-decoration: underline;
+    }
+    .container h1 {
+    font-family:"Arizonia", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: xx-large;
+    }
+
+    
+ .container h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-optical-sizing: auto;
+    font: weight 400px;;
+    font-style: normal;
+   }
+
+.social-links a{
+  color: #5b962b;
+}
+
+hr{
+  border-top: 12px dotted #3c4d03;
+  border-radius: 12px;
+  width: 11%;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 style="font-size: 50px;">Contact Us</h1>
+    <hr>
+    <br><br>
+    <p>We’d love to hear from you! Whether you have a question about products, shipping, your order, or anything else — our team is ready to help.</p>
+
+    <h2>📍 Our Address</h2>
+    <p><strong>LIPZY</strong><br>
+    Pimpri-Chinchwad College of Engineering<br>
+    Akurdi, Pune-44</p>
+
+    <h2>📞 Call Us</h2>
+    <p>Customer Support: <strong>+1 (800) 555-1234</strong><br>
+    Available Mon–Fri: 9am – 6pm IST</p>
+
+    <h2 style="color: #5b962b;">📧 Email Us</h2>
+    <p>General Inquiries: <a href="mailto:contact@lipzy.cfom">contact@lipzy.com</a><br>
+    Support: <a href="mailto:support@lipzy.com">support@lipzy.com</a></p>
+
+    <h2 style="color: #5b962b;">📝 Contact Form</h2>
+    <form>
+      <div style="align-items: center;"   class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required />
+      </div>
+
+  
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="What can we help you with?" />
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Your message here..." required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <h2 style="color: #5b962b" >💄 Stay Connected</h2>
+    <p class="social-links">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">Pinterest</a>
+    </p>
+  </div>
+</body>
+</html>
